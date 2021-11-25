@@ -18,11 +18,11 @@ def ativar_camera(request):
 
     while True:
         # Capture frame-by-frame
-        ok, frame = video_capture.read()
+        ret, frame = video_capture.read()
 
         image_gray = cv2.cvtColor(frame, cv2.COLOR_BGR2GRAY)
 
-        detections = face_detector.detectMultiScale(image_gray)
+        detections = face_detector.detectMultiScale(image_gray, minSize=(100,100), minNeighbors=5)
 
         # Draw a rectangle around the faces
         for (x, y, w, h) in detections:
