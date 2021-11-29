@@ -28,7 +28,6 @@ def ativar_camera(request):
             image_gray = cv2.cvtColor(frame, cv2.COLOR_BGR2GRAY)
 
             detections = face_detector.detectMultiScale(image_gray, minSize=(100, 100), minNeighbors=5)
-            aspaoskapok
             # Draw a rectangle around the faces
             for (x, y, w, h) in detections:
                 print(w, h)
