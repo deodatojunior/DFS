@@ -38,5 +38,5 @@ pip install -r requirements.txt
 
 E após esse comando, execute o comando para iniciar a aplicação:
 ```
-pythom manage.py runserver
+python manage.py runserver
 ```
